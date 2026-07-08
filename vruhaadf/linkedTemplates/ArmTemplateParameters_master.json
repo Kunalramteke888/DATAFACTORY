@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "vruhaadf"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"LS_ADLSGEN2_accountKey": {
+			"value": ""
+		},
+		"LS_SQL DATA MIGRATION_password": {
+			"value": ""
+		},
+		"LS_SQL_DATABASE_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "vruhaserver.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "vruhadatabase"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "piku"
+		},
+		"LS_ADLSGEN2_properties_typeProperties_url": {
+			"value": "https://adlsvruha.dfs.core.windows.net/"
+		},
+		"LS_SQL DATA MIGRATION_properties_typeProperties_server": {
+			"value": "LAPTOP-7LD7FT4Q\\SQLEXPRESS"
+		},
+		"LS_SQL DATA MIGRATION_properties_typeProperties_database": {
+			"value": "AdventureWorksDW2025"
+		},
+		"LS_SQL DATA MIGRATION_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"LS_SQL_DATABASE_properties_typeProperties_server": {
+			"value": "vruhaserver.database.windows.net"
+		},
+		"LS_SQL_DATABASE_properties_typeProperties_database": {
+			"value": "vruhadatabase"
+		},
+		"LS_SQL_DATABASE_properties_typeProperties_userName": {
+			"value": "piku"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
