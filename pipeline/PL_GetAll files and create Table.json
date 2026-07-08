@@ -1,5 +1,5 @@
 {
-	"name": "Get All Files",
+	"name": "PL_GetAll files and create Table",
 	"properties": {
 		"activities": [
 			{
