@@ -9,10 +9,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().parameters.Numbers",
+						"value": "@pipeline().parameters.countries",
 						"type": "Expression"
 					},
-					"isSequential": false,
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "SET NUMBERS",
@@ -45,11 +45,20 @@
 					4,
 					5
 				]
+			},
+			"countries": {
+				"type": "array",
+				"defaultValue": [
+					"India",
+					"China",
+					"UK",
+					"US"
+				]
 			}
 		},
 		"variables": {
 			"X": {
-				"type": "Integer"
+				"type": "String"
 			}
 		},
 		"annotations": []
