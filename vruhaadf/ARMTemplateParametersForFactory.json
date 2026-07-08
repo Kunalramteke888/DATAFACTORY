@@ -23,6 +23,9 @@
 		"LS_SQL_DATABASE_password": {
 			"value": ""
 		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "vruhaserver.database.windows.net"
 		},
@@ -51,6 +54,15 @@
 			"value": "vruhadatabase"
 		},
 		"LS_SQL_DATABASE_properties_typeProperties_userName": {
+			"value": "piku"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "vruhaserver.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "vruhadatabase"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
 			"value": "piku"
 		}
 	}

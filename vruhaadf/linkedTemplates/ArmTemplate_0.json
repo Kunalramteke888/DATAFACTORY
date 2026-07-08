@@ -27,9 +27,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_SQL_DATABASE'"
 		},
-		"LS_SQL DATA MIGRATION_password": {
+		"AzureSqlDatabase2_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'LS_SQL DATA MIGRATION'"
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
@@ -59,17 +59,17 @@
 			"type": "string",
 			"defaultValue": "piku"
 		},
-		"LS_SQL DATA MIGRATION_properties_typeProperties_server": {
+		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "LAPTOP-7LD7FT4Q\\SQLEXPRESS"
+			"defaultValue": "vruhaserver.database.windows.net"
 		},
-		"LS_SQL DATA MIGRATION_properties_typeProperties_database": {
+		"AzureSqlDatabase2_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "AdventureWorksDW2025"
+			"defaultValue": "vruhadatabase"
 		},
-		"LS_SQL DATA MIGRATION_properties_typeProperties_userName": {
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "sa"
+			"defaultValue": "piku"
 		}
 	},
 	"variables": {
@@ -333,6 +333,28 @@
 					}
 				},
 				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabase2')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"server": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]",
+					"database": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('AzureSqlDatabase2_password')]"
+					}
+				}
 			},
 			"dependsOn": []
 		},
@@ -836,34 +858,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_SQL DATA MIGRATION')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('LS_SQL DATA MIGRATION_properties_typeProperties_server')]",
-					"database": "[parameters('LS_SQL DATA MIGRATION_properties_typeProperties_database')]",
-					"encrypt": "optional",
-					"trustServerCertificate": false,
-					"authenticationType": "SQL",
-					"userName": "[parameters('LS_SQL DATA MIGRATION_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('LS_SQL DATA MIGRATION_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "integrationRuntime1",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
 			]
 		}
 	]
