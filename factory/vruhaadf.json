@@ -1,0 +1,15 @@
+{
+	"name": "vruhaadf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "56549cd5-536a-4a51-a876-7df4a3b3d402",
+		"tenantId": "87bf031e-f441-4f41-bd2d-ed9038806587"
+	}
+}

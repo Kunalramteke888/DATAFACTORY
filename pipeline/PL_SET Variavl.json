@@ -1,0 +1,76 @@
+{
+	"name": "PL_SET Variavl",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "x",
+					"value": "100"
+				}
+			},
+			{
+				"name": "Set variable2",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "y",
+					"value": "100303"
+				}
+			},
+			{
+				"name": "Set variable3",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set variable2",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "x",
+					"value": "100010"
+				}
+			}
+		],
+		"variables": {
+			"x": {
+				"type": "String",
+				"defaultValue": "10"
+			},
+			"y": {
+				"type": "String",
+				"defaultValue": "101"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-07-07T18:46:02Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

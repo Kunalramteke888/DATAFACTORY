@@ -1,0 +1,24 @@
+{
+	"name": "ADLSGEN2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLSGEN2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "uploadedfiles",
+				"fileSystem": "container2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
