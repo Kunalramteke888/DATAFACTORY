@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "Kleads-1000.csv",
 				"container": "inputcontainer"
 			},
 			"columnDelimiter": ",",
