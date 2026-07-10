@@ -1,0 +1,61 @@
+{
+	"name": "PL_IF CONDITION",
+	"properties": {
+		"activities": [
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(variables('X'), 100)",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Set variable2",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "output",
+								"value": "Value is not 100"
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "output",
+								"value": "value is 100"
+							}
+						}
+					]
+				}
+			}
+		],
+		"variables": {
+			"X": {
+				"type": "Integer",
+				"defaultValue": 100
+			},
+			"output": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
