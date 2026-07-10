@@ -1,0 +1,37 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Filter1",
+				"type": "Filter",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('Numbers')",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@greater(item(),2)",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"Numbers": {
+				"type": "Array",
+				"defaultValue": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				]
+			}
+		},
+		"annotations": []
+	}
+}
