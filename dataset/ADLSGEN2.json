@@ -10,8 +10,9 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "uploadedfiles",
-				"fileSystem": "container2"
+				"fileName": "newfile.csv",
+				"folderPath": "CSF FILES",
+				"fileSystem": "container1"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
