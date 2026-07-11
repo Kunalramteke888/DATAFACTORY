@@ -1,0 +1,28 @@
+{
+	"name": "sample",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable11",
+				"description": "adfe",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "s",
+					"value": "2"
+				}
+			}
+		],
+		"variables": {
+			"s": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
