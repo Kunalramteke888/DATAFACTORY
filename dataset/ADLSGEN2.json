@@ -5,12 +5,20 @@
 			"referenceName": "LS_ADLSGEN2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Filenamefromsetvariable": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "newfile.csv",
+				"fileName": {
+					"value": "@dataset().Filenamefromsetvariable",
+					"type": "Expression"
+				},
 				"folderPath": "CSF FILES",
 				"fileSystem": "container1"
 			},
